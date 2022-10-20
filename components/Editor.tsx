@@ -1,9 +1,12 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import styles from "../styles/Home.module.css"
 const Editor = ({ input, red, onKeyDown }: { input: string, red: boolean, onKeyDown: (e: React.KeyboardEvent<HTMLDivElement>) => void }) => {
-
+    const ref = useRef<null | HTMLDivElement>(null)
+    useEffect(() => {
+        ref.current?.focus()
+    }, [])
     return (
-        <div className={styles.textEditorContainer} onKeyDown={(e) => onKeyDown(e)} contentEditable>
+        <div ref={ref} className={styles.textEditorContainer} onKeyDown={(e) => onKeyDown(e)} contentEditable>
             <div>
 
                 <div
