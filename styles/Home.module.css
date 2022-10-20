@@ -108,6 +108,18 @@
   margin-left: 0.5rem;
 }
 
+/* for text editor box */
+.textEditorContainer {
+  height: 500px;
+  width: 100%;
+  padding: 2rem;
+  border: black solid 1px;
+  outline: none;
+}
+.red {
+  color: red;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
